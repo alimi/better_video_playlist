@@ -13,6 +13,7 @@ end
 
 group :test do
   gem "capybara", "~> 1.1.2"
+  gem "launchy", "~> 2.1.0"
 end
 
 # Gems used only for assets and not required

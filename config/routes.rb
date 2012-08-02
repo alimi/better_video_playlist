@@ -1,4 +1,8 @@
 BetterVideoPlaylist::Application.routes.draw do
+  resources :playlists, only: [:index]
+
+  root :to => 'playlists#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

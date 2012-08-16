@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/better_video_playlist
+//= require_tree ./backbone/templates
+//= require_tree ./backbone/models
+//= require_tree ./backbone/views
+//= require_tree ./backbone/routers
 //= require_tree .

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Visitor" do
+describe "Visitor", :js => true do
   describe "Visit Home" do
     before { visit root_path }
 

@@ -10,6 +10,7 @@ gem "rails-backbone", "~> 0.7.2"
 
 group :development, :test do
   gem "rspec-rails", "~> 2.0"
+  gem "jasmine", "~> 1.2.1"
 end
 
 group :test do

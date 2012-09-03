@@ -12,7 +12,6 @@ describe("BetterVideoPlaylist.Models.Playlist", function() {
     });
 
     it("should save the YouTube player in the model instance", function(){
-      console.log(playlist.get("player"));
       expect(playlist.get("player")).toBeDefined();
     });
   });

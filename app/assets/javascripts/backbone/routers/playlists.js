@@ -5,32 +5,32 @@ BetterVideoPlaylist.Routers.Playlists = Backbone.Router.extend({
 
   index: function(){
     var hot_100 = new BetterVideoPlaylist.Models.Playlist({
-      youtube_id: "PLF72A35082E13E2E3",
+      youtube_id: "PLm3KPZEPAGDejNtgs2rVjFprZig6xPAd-",
       name: "hot_100"
     });
 
     var hip_hop = new BetterVideoPlaylist.Models.Playlist({
-      youtube_id: "PLD6A22551384A5E4B",
+      youtube_id: "PLm3KPZEPAGDflOwHQ-lfyCf4uOIAKE6Q0",
       name: "hip_hop"
     });
 
     var country = new BetterVideoPlaylist.Models.Playlist({
-      youtube_id: "PL047C9DF6FAA4CA89",
+      youtube_id: "PLm3KPZEPAGDfhbWbPiAfhPac4mIasxo3M",
       name: "country"
     });
 
     var rock = new BetterVideoPlaylist.Models.Playlist({
-      youtube_id: "PL1E7107DABE0431B8",
+      youtube_id: "PLm3KPZEPAGDcC8QOzyy6HCsZ8jhdsKshV",
       name: "rock"
     });
 
     var latin = new BetterVideoPlaylist.Models.Playlist({
-      youtube_id: "PLDC89B07333D0A70B",
+      youtube_id: "PLm3KPZEPAGDdxoLWZ-yO8YXMaWsRB6L5z",
       name: "latin"
     });
 
     var dance = new BetterVideoPlaylist.Models.Playlist({
-      youtube_id: "PL641DC5B1262CE5A1",
+      youtube_id: "PLm3KPZEPAGDfazqF27t4Yo0Lk9aSMJcID",
       name: "dance"
     });
 

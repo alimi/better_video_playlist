@@ -38,7 +38,7 @@ BetterVideoPlaylist.Routers.Playlists = Backbone.Router.extend({
       [hot_100, hip_hop, country, rock, latin, dance]);
     var view = new BetterVideoPlaylist.Views.PlaylistsIndex(
       { collection: playlists });
-    
+
     view.render();
   }
 });

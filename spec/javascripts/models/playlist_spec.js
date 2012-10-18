@@ -8,6 +8,7 @@ describe("BetterVideoPlaylist.Models.Playlist", function() {
   describe("createPlayer", function() {
     beforeEach(function() {
       spyOn(playlist, "createApiPlayer").andReturn("player");
+      spyOn(playlist, "setPlayerBindings");
       playlist.createPlayer("playlist_container"); 
     });
 

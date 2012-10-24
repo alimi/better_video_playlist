@@ -1,5 +1,5 @@
 BetterVideoPlaylist.Views.PlaylistsIndex = Backbone.View.extend({
-  el: "#playlists_container",
+  el: "#playlist_container",
 
   initialize: function() {
     this.collection.on("playlist:active", this.update, this);
@@ -12,7 +12,7 @@ BetterVideoPlaylist.Views.PlaylistsIndex = Backbone.View.extend({
       var playlistShow = 
         new BetterVideoPlaylist.Views.PlaylistShow({ model: playlist });
 
-      self.$("#playlist_selector").append(playlistShow.render().$el);
+      self.$el.append(playlistShow.render().$el);
       playlistShow.createPlayer();
     });
 

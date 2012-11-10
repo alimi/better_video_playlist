@@ -27,17 +27,14 @@ BetterVideoPlaylist.Models.Playlist = Backbone.Model.extend({
   },
 
   setPlayerBindings: function() {
-    this.get("player").on("player:playing", function(player_iframe) {
-      this.trigger("playlist:active", player_iframe);
+    this.get("player").on("player:playing", function() {
+      this.trigger("playlist:active");
     }, this);
   },
 
   playerStateChanged: function(event) {
     if(event.data == YT.PlayerState.PLAYING) {
-      event.target.stopVideo();
-      var player_iframe = $(event.target.getIframe()).detach();
-      event.target.trigger("player:playing", player_iframe);
-      event.target.setSize(640, 360);
+      event.target.trigger("player:playing");
     }
   }
 });

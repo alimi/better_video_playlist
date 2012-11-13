@@ -14,10 +14,11 @@ BetterVideoPlaylist.Models.Playlist = Backbone.Model.extend({
       width: '200', 
       playerVars: {
         'listType': 'playlist',
-        'list': this.escape("youtube_id")
+        'list': this.get("youtube_id")
       },
       events: {
-        'onStateChange': self.playerStateChanged
+        'onStateChange': self.playerStateChanged,
+        'onReady': self.playerReady
       }
     });
 
@@ -30,11 +31,19 @@ BetterVideoPlaylist.Models.Playlist = Backbone.Model.extend({
     this.get("player").on("player:playing", function() {
       this.trigger("playlist:active");
     }, this);
+
+    this.get("player").on("player:ready", function() {
+      this.trigger("playlist:ready");
+    }, this);
   },
 
   playerStateChanged: function(event) {
     if(event.data == YT.PlayerState.PLAYING) {
       event.target.trigger("player:playing");
     }
+  },
+
+  playerReady: function(event) {
+    event.target.trigger("player:ready");
   }
 });

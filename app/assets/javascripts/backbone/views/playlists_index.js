@@ -2,7 +2,7 @@ BetterVideoPlaylist.Views.PlaylistsIndex = Backbone.View.extend({
   el: "#playlist_container",
 
   initialize: function() {
-    this.collection.on("playlist:active", this.resizePage, this);
+    this.collection.on("change:active", this.resizePage, this);
   },
 
   render: function() {

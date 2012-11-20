@@ -29,7 +29,7 @@ BetterVideoPlaylist.Models.Playlist = Backbone.Model.extend({
 
   setPlayerBindings: function() {
     this.get("player").on("player:playing", function() {
-      this.trigger("playlist:active");
+      this.set('pending', true);
     }, this);
 
     this.get("player").on("player:ready", function() {

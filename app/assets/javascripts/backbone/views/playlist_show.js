@@ -6,7 +6,7 @@ BetterVideoPlaylist.Views.PlaylistShow = Backbone.View.extend({
   ),
 
   initialize: function() {
-    this.model.on("playlist:active", this.promotePlayer, this);
+    this.model.on("change:active", this.promotePlayer, this);
     this.model.on("playlist:ready", this.playVideo, this);
   },
 
@@ -26,11 +26,8 @@ BetterVideoPlaylist.Views.PlaylistShow = Backbone.View.extend({
   },
 
   promotePlayer: function() {
-    if(!this.model.get("active")) {
-      this.$el.parent().prepend(this.$el);
-      this.$(this.$('iframe')).animate({width: '853px', height: '480px'});
-      this.model.set("active", true);
-    }
+    this.$el.parent().prepend(this.$el);
+    this.$(this.$('iframe')).animate({width: '853px', height: '480px'});
   },
 
   playVideo: function() {

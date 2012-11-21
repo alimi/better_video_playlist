@@ -43,6 +43,10 @@ describe('BetterVideoPlaylist.Collections.Playlist', function() {
       it('should keep playlist_a as active', function(){
         expect(playlist_a.get('active')).toBeTruthy();
       });
+
+      it('should not set playlist_a to pending', function(){
+        expect(playlist_a.get('pending')).toBeFalsy();
+      });
     });
   });
 });

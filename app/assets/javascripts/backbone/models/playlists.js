@@ -17,6 +17,7 @@ BetterVideoPlaylist.Collections.Playlists = Backbone.Collection.extend({
     if(pending !== undefined) {
       if(active !== undefined) {
         if(pending === active) {
+          active.set('pending', false);
           return;
         }
 

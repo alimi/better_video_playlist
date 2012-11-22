@@ -1,15 +1,13 @@
 describe('BetterVideoPlaylist.Collections.Playlist', function() {
   var playlist_a;
   var playlist_b;
-  var playlist_c;
   var playlists;
 
   beforeEach(function(){
     playlist_a = new BetterVideoPlaylist.Models.Playlist();
     playlist_b = new BetterVideoPlaylist.Models.Playlist();
-    playlist_c = new BetterVideoPlaylist.Models.Playlist();
     playlists = new BetterVideoPlaylist.Collections.Playlists(
-      [playlist_a, playlist_b, playlist_c]);
+      [playlist_a, playlist_b]);
   });
 
   describe('activating a playlist', function() {

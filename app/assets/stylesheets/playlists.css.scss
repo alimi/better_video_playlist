@@ -4,5 +4,9 @@
 
 li {
   list-style-type: none;
-  display: inline-block;
+  display: inline;
+}
+
+li.active {
+  display: block;
 }

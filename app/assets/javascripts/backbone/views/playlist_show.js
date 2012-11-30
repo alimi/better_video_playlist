@@ -35,13 +35,16 @@ BetterVideoPlaylist.Views.PlaylistShow = Backbone.View.extend({
   },
 
   promotePlayer: function() {
+    this.$('iframe').animate({width: '0px', height: '0px'}, 'slow');
     this.$el.parent().prepend(this.$el);
-    this.$(this.$('iframe')).animate({width: '853px', height: '480px'});
+    this.$el.addClass('active');
+    this.$('iframe').animate({width: '853px', height: '480px'}, 'slow');
   },
 
   demotePlayer: function() {
     this.model.get('player').stopVideo();
-    this.$(this.$('iframe')).animate({width: '200px', height: '200px'});
+    this.$el.removeClass('active');
+    this.$('iframe').animate({width: '200px', height: '200px'}, 'slow');
   },
 
   playVideo: function() {

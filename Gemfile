@@ -6,7 +6,8 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem "rails-backbone", "~> 0.7.2"
+gem 'rails-backbone', '~> 0.7.2'
+gem 'nokogiri', '~> 1.5.6'
 
 group :development, :test do
   gem "rspec-rails", "~> 2.0"

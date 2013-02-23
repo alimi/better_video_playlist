@@ -2,11 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-li {
-  list-style-type: none;
-  display: inline;
-}
+ul#playlist_container {
+  li {
+    list-style-type: none;
+    display: inline;
+  }
 
-li.active {
-  display: block;
+  .active {
+    display: block;
+  }
 }

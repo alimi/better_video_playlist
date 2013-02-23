@@ -1,5 +1,6 @@
 BetterVideoPlaylist::Application.routes.draw do
-  resources :playlists, only: [:index]
+  resources :playlists, :only => [:index]
+  resource :admin, :only => [:show]
 
   root :to => 'playlists#index'
 

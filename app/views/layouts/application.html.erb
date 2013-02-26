@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <%= render 'shared/flash_messages', :flash => flash %>
   <div class="container-fluid">
     <center>
       <%= yield %>

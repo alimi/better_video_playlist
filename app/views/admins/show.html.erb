@@ -2,9 +2,21 @@
 
 <ul>
   <li>
-    YouTube username: <%= @youtube_username %>
+    <strong>YouTube username</strong>
+    <p><%= @youtube_username %></p>
   </li>
   <li>
-    Get Authorization to use <%= @youtube_username %> data
+    <% if BetterVideoPlaylist::Application.config.youtube_refresh_token.blank? %>
+      <%= link_to(
+        "Get Authorization to use #{@youtube_username} data",
+        youtube_authorization_path,
+        :method => :post
+      )%>
+    <% else %>
+      <strong>Refresh token</strong>
+      <p>
+        <%= BetterVideoPlaylist::Application.config.youtube_refresh_token %>
+      </p>
+    <% end %>
   </li>
 </ul>

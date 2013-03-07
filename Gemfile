@@ -8,6 +8,7 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'rails-backbone', '~> 0.7.2'
 gem 'nokogiri', '~> 1.5.6'
+gem "google-api-client", "~> 0.6.1"
 
 group :development, :test do
   gem "rspec-rails", "~> 2.0"

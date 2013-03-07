@@ -1,6 +1,7 @@
 BetterVideoPlaylist::Application.routes.draw do
   resources :playlists, :only => [:index]
   resource :admin, :only => [:show]
+  resource :youtube_authorization, :only => [:show, :create]
 
   root :to => 'playlists#index'
 

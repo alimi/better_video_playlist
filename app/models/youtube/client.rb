@@ -21,14 +21,10 @@ module Youtube
       @client.authorization.authorization_uri.to_s
     end
 
-    def generate_tokens(authorization_code)
+    def generate_refresh_token(authorization_code)
       @client.authorization.code = authorization_code
       response = @client.authorization.fetch_access_token!
-
-      {
-        :access_token => response['access_token'],
-        :refresh_token => response['refresh_token']
-      }
+      response['refresh_token']
     end
   end
 end

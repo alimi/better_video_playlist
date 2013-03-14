@@ -6,10 +6,8 @@ class YoutubeAuthorizationsController < ApplicationController
 
   def show
     youtube = Youtube::Client.new
-    tokens = youtube.generate_tokens(params[:code])
-    flash[:notice] = "Authorized! " +
-      "Access token: #{tokens[:access_token]}. " +
-      "Refresh token: #{tokens[:refresh_token]}"
+    refresh_token = youtube.generate_refresh_token(params[:code])
+    flash[:notice] = "Authorized! The refresh token is #{refresh_token}"
     redirect_to admin_path
   end
 end

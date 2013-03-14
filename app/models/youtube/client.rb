@@ -2,8 +2,6 @@ require 'google/api_client'
 
 module Youtube
   class Client
-    attr_reader :client
-
     def initialize
       @client = Google::APIClient.new
       @client.discovered_api('youtube', 'v3')
@@ -25,6 +23,12 @@ module Youtube
       @client.authorization.code = authorization_code
       response = @client.authorization.fetch_access_token!
       response['refresh_token']
+    end
+
+    def refresh_access_token
+      @client.authorization.refresh_token =
+        BetterVideoPlaylist::Application.config.youtube_refresh_token
+      @client.authorization.fetch_access_token!
     end
   end
 end

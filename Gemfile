@@ -18,6 +18,8 @@ end
 group :test do
   gem "capybara", "~> 1.1.2"
   gem "launchy", "~> 2.1.0"
+  gem "vcr", "~> 2.4.0"
+  gem "webmock", "~> 1.11.0"
 end
 
 group :production do

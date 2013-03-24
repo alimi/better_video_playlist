@@ -1,0 +1,552 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.billboard.com/rss/charts/hot-100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - text/html
+      Date:
+      - Sun, 24 Mar 2013 14:58:30 GMT
+      Last-Modified:
+      - Wed, 20 Mar 2013 11:38:01 GMT
+      Location:
+      - http://www1.billboard.com/rss/charts/hot-100
+      Server:
+      - ECS (dca/24A6)
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - 301-HIT
+      Content-Length:
+      - '178'
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Sun, 24 Mar 2013 14:58:30 GMT
+- request:
+    method: get
+    uri: http://www1.billboard.com/rss/charts/hot-100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Date:
+      - Sun, 24 Mar 2013 14:58:31 GMT
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '39118'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss version=\"2.0\">\r\n
+        \ <channel>\r\n    <title>Billboard Hot 100 Chart</title>\r\n    <link>http://www1.billboard.com/</link>\r\n
+        \   <description />\r\n    <item>\r\n      <title>1: Harlem Shake, Baauer</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Harlem
+        Shake by Baauer ranks #1</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770566</guid>\r\n    </item>\r\n    <item>\r\n      <title>2:
+        Thrift Shop, Macklemore &amp; Ryan Lewis Featuring Wanz</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Thrift Shop by Macklemore &amp; Ryan Lewis Featuring Wanz
+        ranks #2</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770576</guid>\r\n    </item>\r\n    <item>\r\n      <title>3:
+        When I Was Your Man, Bruno Mars</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>When I Was Your Man by Bruno Mars ranks #3</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770586</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>4: Suit &amp; Tie, Justin Timberlake
+        Featuring Jay Z</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Suit &amp; Tie by Justin Timberlake Featuring Jay Z ranks
+        #4</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770596</guid>\r\n    </item>\r\n    <item>\r\n      <title>5:
+        Stay, Rihanna Featuring Mikky Ekko</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Stay by Rihanna Featuring Mikky Ekko ranks #5</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770606</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>6: Started From The Bottom, Drake</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Started
+        From The Bottom by Drake ranks #6</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770616</guid>\r\n    </item>\r\n    <item>\r\n      <title>7:
+        I Knew You Were Trouble., Taylor Swift</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>I Knew You Were Trouble. by Taylor Swift ranks #7</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770626</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>8: Scream &amp; Shout, will.i.am
+        &amp; Britney Spears</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Scream &amp; Shout by will.i.am &amp; Britney Spears ranks
+        #8</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770636</guid>\r\n    </item>\r\n    <item>\r\n      <title>9:
+        Just Give Me A Reason, P!nk Featuring Nate Ruess</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Just Give Me A Reason by P!nk Featuring Nate Ruess ranks
+        #9</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770646</guid>\r\n    </item>\r\n    <item>\r\n      <title>10:
+        Love Me, Lil Wayne Featuring Drake &amp; Future</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Love Me by Lil Wayne Featuring Drake &amp; Future ranks
+        #10</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770656</guid>\r\n    </item>\r\n    <item>\r\n      <title>11:
+        Feel This Moment, Pitbull Featuring Christina Aguilera</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Feel This Moment by Pitbull Featuring Christina Aguilera
+        ranks #11</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770666</guid>\r\n    </item>\r\n    <item>\r\n      <title>12:
+        Daylight, Maroon 5</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Daylight by Maroon 5 ranks #12</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770676</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>13: Locked Out Of Heaven, Bruno
+        Mars</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Locked Out Of Heaven by Bruno Mars ranks #13</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770686</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>14: Ho Hey, The Lumineers</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Ho
+        Hey by The Lumineers ranks #14</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770696</guid>\r\n    </item>\r\n    <item>\r\n      <title>15:
+        Don't You Worry Child, Swedish House Mafia Featuring John Martin</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Don't
+        You Worry Child by Swedish House Mafia Featuring John Martin ranks #15</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770706</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>16: F**kin Problems, A$AP Rocky
+        Featuring Drake, 2 Chainz &amp; Kendrick Lamar</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>F**kin Problems by A$AP Rocky Featuring Drake, 2 Chainz
+        &amp; Kendrick Lamar ranks #16</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770716</guid>\r\n    </item>\r\n    <item>\r\n      <title>17:
+        Sweet Nothing, Calvin Harris Featuring Florence Welch</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Sweet Nothing by Calvin Harris Featuring Florence Welch
+        ranks #17</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770726</guid>\r\n    </item>\r\n    <item>\r\n      <title>18:
+        Radioactive, Imagine Dragons</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Radioactive by Imagine Dragons ranks #18</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770736</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>19: Heart Attack, Demi Lovato</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Heart
+        Attack by Demi Lovato ranks #19</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770746</guid>\r\n    </item>\r\n    <item>\r\n      <title>20:
+        Pour It Up, Rihanna</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Pour It Up by Rihanna ranks #20</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770756</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>21: I Will Wait, Mumford &amp; Sons</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>I
+        Will Wait by Mumford &amp; Sons ranks #21</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770766</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>22: It's Time, Imagine Dragons</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>It's
+        Time by Imagine Dragons ranks #22</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770776</guid>\r\n    </item>\r\n    <item>\r\n      <title>23:
+        Girl On Fire, Alicia Keys Featuring Nicki Minaj</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Girl On Fire by Alicia Keys Featuring Nicki Minaj ranks
+        #23</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770786</guid>\r\n    </item>\r\n    <item>\r\n      <title>24:
+        Sure Be Cool If You Did, Blake Shelton</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Sure Be Cool If You Did by Blake Shelton ranks #24</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770796</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>25: Mirrors, Justin Timberlake</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Mirrors
+        by Justin Timberlake ranks #25</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770806</guid>\r\n    </item>\r\n    <item>\r\n      <title>26:
+        Carry On, fun.</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Carry On by fun. ranks #26</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770816</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>27: Catch My Breath, Kelly Clarkson</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Catch
+        My Breath by Kelly Clarkson ranks #27</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770826</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>28: Little Talks, Of Monsters And
+        Men</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Little Talks by Of Monsters And Men ranks #28</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770836</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>29: Gangnam Style, PSY</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Gangnam
+        Style by PSY ranks #29</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770846</guid>\r\n    </item>\r\n    <item>\r\n      <title>30:
+        Poetic Justice, Kendrick Lamar Featuring Drake</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Poetic Justice by Kendrick Lamar Featuring Drake ranks
+        #30</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770856</guid>\r\n    </item>\r\n    <item>\r\n      <title>31:
+        Troublemaker, Olly Murs Featuring Flo Rida</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Troublemaker by Olly Murs Featuring Flo Rida ranks #31</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770866</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>32: Try, P!nk</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Try by P!nk ranks #32</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770876</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>33: Beauty And A Beat, Justin Bieber
+        Featuring Nicki Minaj</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Beauty And A Beat by Justin Bieber Featuring Nicki Minaj
+        ranks #33</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770886</guid>\r\n    </item>\r\n    <item>\r\n      <title>34:
+        I Love It, Icona Pop Featuring Charli XCX</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>I Love It by Icona Pop Featuring Charli XCX ranks #34</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770896</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>35: Downtown, Lady Antebellum</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Downtown
+        by Lady Antebellum ranks #35</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770906</guid>\r\n    </item>\r\n    <item>\r\n      <title>36:
+        My Songs Know What You Did In The Dark (Light Em Up), Fall Out Boy</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>My
+        Songs Know What You Did In The Dark (Light Em Up) by Fall Out Boy ranks #36</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770916</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>37: Sail, AWOLNATION</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Sail
+        by AWOLNATION ranks #37</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770926</guid>\r\n    </item>\r\n    <item>\r\n      <title>38:
+        Bad, Wale Featuring Tiara Thomas</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Bad by Wale Featuring Tiara Thomas ranks #38</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770936</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>39: Mama's Broken Heart, Miranda
+        Lambert</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Mama's Broken Heart by Miranda Lambert ranks #39</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770946</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>40: Can't Hold Us, Macklemore &amp;
+        Ryan Lewis Featuring Ray Dalton</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Can't Hold Us by Macklemore &amp; Ryan Lewis Featuring
+        Ray Dalton ranks #40</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770956</guid>\r\n    </item>\r\n    <item>\r\n      <title>41:
+        Home, Phillip Phillips</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Home by Phillip Phillips ranks #41</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770966</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>42: One More Night, Maroon 5</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>One
+        More Night by Maroon 5 ranks #42</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50770976</guid>\r\n    </item>\r\n    <item>\r\n      <title>43:
+        Diamonds, Rihanna</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Diamonds by Rihanna ranks #43</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770986</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>44: Two Black Cadillacs, Carrie
+        Underwood</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Two Black Cadillacs by Carrie Underwood ranks #44</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50770996</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>45: All Gold Everything, Trinidad
+        James</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>All Gold Everything by Trinidad James ranks #45</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771006</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>46: Adorn, Miguel</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Adorn by Miguel ranks #46</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771016</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>47: Wagon Wheel, Darius Rucker</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Wagon
+        Wheel by Darius Rucker ranks #47</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771026</guid>\r\n    </item>\r\n    <item>\r\n      <title>48:
+        Bugatti, Ace Hood Featuring Future &amp; Rick Ross</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Bugatti by Ace Hood Featuring Future &amp; Rick Ross ranks
+        #48</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771036</guid>\r\n    </item>\r\n    <item>\r\n      <title>49:
+        Some Nights, fun.</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Some Nights by fun. ranks #49</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771046</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>50: Hall Of Fame, The Script Featuring
+        will.i.am</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Hall Of Fame by The Script Featuring will.i.am ranks #50</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771056</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>51: I Drive Your Truck, Lee Brice</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>I
+        Drive Your Truck by Lee Brice ranks #51</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771066</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>52: Get Your Shine On, Florida Georgia
+        Line</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Get Your Shine On by Florida Georgia Line ranks #52</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771076</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>53: Madness, Muse</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Madness by Muse ranks #53</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771086</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>54: Somebody's Heartbreak, Hunter
+        Hayes</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Somebody's Heartbreak by Hunter Hayes ranks #54</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771096</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>55: Kiss You, One Direction</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Kiss
+        You by One Direction ranks #55</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771106</guid>\r\n    </item>\r\n    <item>\r\n      <title>56:
+        Loveeeeeee Song, Rihanna Featuring Future</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Loveeeeeee Song by Rihanna Featuring Future ranks #56</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771116</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>57: Alive, Krewella</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Alive
+        by Krewella ranks #57</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771126</guid>\r\n    </item>\r\n    <item>\r\n      <title>58:
+        Pirate Flag, Kenny Chesney</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Pirate Flag by Kenny Chesney ranks #58</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771136</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>59: Gone, Gone, Gone, Phillip Phillips</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Gone,
+        Gone, Gone by Phillip Phillips ranks #59</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771146</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>60: Power Trip, J. Cole Featuring
+        Miguel</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Power Trip by J. Cole Featuring Miguel ranks #60</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771156</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>61: R.I.P., Young Jeezy Featuring
+        2 Chainz</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>R.I.P. by Young Jeezy Featuring 2 Chainz ranks #61</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771166</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>62: Better Dig Two, The Band Perry</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Better
+        Dig Two by The Band Perry ranks #62</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771176</guid>\r\n    </item>\r\n    <item>\r\n      <title>63:
+        One Of Those Nights, Tim McGraw</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>One Of Those Nights by Tim McGraw ranks #63</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771186</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>64: 22, Taylor Swift</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>22
+        by Taylor Swift ranks #64</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771196</guid>\r\n    </item>\r\n    <item>\r\n      <title>65:
+        I'm Different, 2 Chainz</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>I'm Different by 2 Chainz ranks #65</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771206</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>66: If I Didn't Have You, Thompson
+        Square</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>If I Didn't Have You by Thompson Square ranks #66</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771216</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>67: Next To Me, Emeli Sande</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Next
+        To Me by Emeli Sande ranks #67</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771226</guid>\r\n    </item>\r\n    <item>\r\n      <title>68:
+        C'Mon, Ke$ha</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>C'Mon by Ke$ha ranks #68</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771236</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>69: Neva End, Future</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Neva
+        End by Future ranks #69</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771246</guid>\r\n    </item>\r\n    <item>\r\n      <title>70:
+        Tornado, Little Big Town</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Tornado by Little Big Town ranks #70</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771256</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>71: Give It All We Got Tonight,
+        George Strait</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Give It All We Got Tonight by George Strait ranks #71</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771266</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>72: Love And War, Tamar Braxton</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Love
+        And War by Tamar Braxton ranks #72</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771276</guid>\r\n    </item>\r\n    <item>\r\n      <title>73:
+        Merry Go 'Round, Kacey Musgraves</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Merry Go 'Round by Kacey Musgraves ranks #73</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771286</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>74: One Way Or Another (Teenage
+        Kicks), One Direction</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>One Way Or Another (Teenage Kicks) by One Direction ranks
+        #74</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771296</guid>\r\n    </item>\r\n    <item>\r\n      <title>75:
+        Show Out, Juicy J Featuring Big Sean And Young Jeezy</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Show Out by Juicy J Featuring Big Sean And Young Jeezy
+        ranks #75</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771306</guid>\r\n    </item>\r\n    <item>\r\n      <title>76:
+        Wicked Games, The Weeknd</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Wicked Games by The Weeknd ranks #76</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771316</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>77: Freaks, French Montana Featuring
+        Nicki Minaj</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Freaks by French Montana Featuring Nicki Minaj ranks #77</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771326</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>78: I Can Take It From There, Chris
+        Young</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>I Can Take It From There by Chris Young ranks #78</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771336</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>79: Battle Scars, Lupe Fiasco &amp;
+        Guy Sebastian</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Battle Scars by Lupe Fiasco &amp; Guy Sebastian ranks #79</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771346</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>80: Kisses Down Low, Kelly Rowland</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Kisses
+        Down Low by Kelly Rowland ranks #80</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771356</guid>\r\n    </item>\r\n    <item>\r\n      <title>81:
+        Highway Don't Care, Tim McGraw With Taylor Swift</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Highway Don't Care by Tim McGraw With Taylor Swift ranks
+        #81</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771366</guid>\r\n    </item>\r\n    <item>\r\n      <title>82:
+        We Still In This B****, B.o.B Featuring T.I. &amp; Juicy J</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>We Still In This B**** by B.o.B Featuring T.I. &amp; Juicy
+        J ranks #82</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771376</guid>\r\n    </item>\r\n    <item>\r\n      <title>83:
+        Hey Porsche, Nelly</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Hey Porsche by Nelly ranks #83</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771386</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>84: Like Jesus Does, Eric Church</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Like
+        Jesus Does by Eric Church ranks #84</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771396</guid>\r\n    </item>\r\n    <item>\r\n      <title>85:
+        Who Booty, Jonn Hart Featuring IamSU!</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Who Booty by Jonn Hart Featuring IamSU! ranks #85</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771406</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>86: Don't Judge Me, Chris Brown</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Don't
+        Judge Me by Chris Brown ranks #86</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771416</guid>\r\n    </item>\r\n    <item>\r\n      <title>87:
+        DONE., The Band Perry</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>DONE. by The Band Perry ranks #87</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771426</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>88: The Only Way I Know, Jason Aldean
+        With Luke Bryan &amp; Eric Church</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>The Only Way I Know by Jason Aldean With Luke Bryan &amp;
+        Eric Church ranks #88</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771436</guid>\r\n    </item>\r\n    <item>\r\n      <title>89:
+        Stubborn Love, The Lumineers</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Stubborn Love by The Lumineers ranks #89</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771446</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>90: So Many Girls, DJ Drama Featuring
+        Wale, Tyga &amp; Roscoe Dash</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>So Many Girls by DJ Drama Featuring Wale, Tyga &amp; Roscoe
+        Dash ranks #90</description>\r\n      <category>Hot 100</category>\r\n      <pubDate>Sat,
+        30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771456</guid>\r\n    </item>\r\n    <item>\r\n      <title>91:
+        Gold, Britt Nicole</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Gold by Britt Nicole ranks #91</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771466</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>92: More Than Miles, Brantley Gilbert</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>More
+        Than Miles by Brantley Gilbert ranks #92</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771476</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>93: 1994, Jason Aldean</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>1994
+        by Jason Aldean ranks #93</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771486</guid>\r\n    </item>\r\n    <item>\r\n      <title>94:
+        Levitate, Hadouken!</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Levitate by Hadouken! ranks #94</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771496</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>95: Cups, Anna Kendrick</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Cups
+        by Anna Kendrick ranks #95</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771506</guid>\r\n    </item>\r\n    <item>\r\n      <title>96:
+        Dope, Tyga Featuring Rick Ross</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Dope by Tyga Featuring Rick Ross ranks #96</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771516</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>97: Love Sosa, Chief Keef</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Love
+        Sosa by Chief Keef ranks #97</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771526</guid>\r\n    </item>\r\n    <item>\r\n      <title>98:
+        Changed, Rascal Flatts</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Changed by Rascal Flatts ranks #98</description>\r\n      <category>Hot
+        100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n
+        \     <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771536</guid>\r\n
+        \   </item>\r\n    <item>\r\n      <title>99: Buzzkill, Luke Bryan</title>\r\n
+        \     <link>http://www1.billboard.com/charts/hot-100</link>\r\n      <description>Buzzkill
+        by Luke Bryan ranks #99</description>\r\n      <category>Hot 100</category>\r\n
+        \     <pubDate>Sat, 30 Mar 2013 04:00:00 GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30
+        00:00:00.0-50771546</guid>\r\n    </item>\r\n    <item>\r\n      <title>100:
+        Little Things, One Direction</title>\r\n      <link>http://www1.billboard.com/charts/hot-100</link>\r\n
+        \     <description>Little Things by One Direction ranks #100</description>\r\n
+        \     <category>Hot 100</category>\r\n      <pubDate>Sat, 30 Mar 2013 04:00:00
+        GMT</pubDate>\r\n      <guid isPermaLink=\"false\">2013-03-30 00:00:00.0-50771556</guid>\r\n
+        \   </item>\r\n  </channel>\r\n</rss>\r\n\r\n"
+    http_version: 
+  recorded_at: Sun, 24 Mar 2013 14:58:31 GMT
+recorded_with: VCR 2.4.0

@@ -4,7 +4,7 @@ module Youtube
   class Client
     def initialize
       @client = Google::APIClient.new
-      @client.discovered_api('youtube', 'v3')
+      @discovered_api = @client.discovered_api('youtube', 'v3')
       @client.authorization.client_id =
         BetterVideoPlaylist::Application.config.youtube_client_id
       @client.authorization.client_secret =
@@ -29,6 +29,41 @@ module Youtube
       @client.authorization.refresh_token =
         BetterVideoPlaylist::Application.config.youtube_refresh_token
       @client.authorization.fetch_access_token!
+    end
+
+    def search_action(query)
+      @client.
+        execute(
+          :api_method => @discovered_api.search.list,
+          :parameters =>
+            {
+              :part => 'id',
+              :q => query,
+              :type => 'video',
+              :videoEmbeddable => 'true',
+              :maxResults => 1
+            }
+        )
+    end
+
+    def playlist_action(playlist)
+      @client.
+        execute(
+          :api_method => @discovered_api.playlists.insert,
+          :parameters => {:part => 'snippet,status'},
+          :body => playlist.to_json,
+          :headers => {'Content-Type' => 'application/json'}
+        )
+    end
+
+    def playlist_item_action(playlist_item)
+      @client.
+        execute(
+          :api_method => @discovered_api.playlist_items.insert,
+          :parameters => {:part => 'snippet'},
+          :body => playlist_item.to_json,
+          :headers => {'Content-Type' => 'application/json'}
+        )
     end
   end
 end

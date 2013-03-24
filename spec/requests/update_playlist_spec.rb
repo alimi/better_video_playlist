@@ -20,7 +20,6 @@ describe 'Create playlist' do
       VCR.use_cassette 'youtube/populate_hot_100_playlist' do
         playlist.youtube_id = youtube_playlist.populate_with_songs(songs)
       end
-      puts "playlist.youtube_id: #{playlist.youtube_id}"
     end
 
     its(:youtube_id) { should == 'PLOANzs84P9WSE3tcKD7mkipmXSC8LkuAE' }

@@ -2,9 +2,12 @@ require 'google/api_client'
 
 module Youtube
   class Playlist
-    def initialize(client, title)
+    attr_accessor :youtube_id
+
+    def initialize(client, title, youtube_id=nil)
       @client = client
       @title = title
+      @youtube_id = youtube_id
     end
 
     def to_json
@@ -16,13 +19,8 @@ module Youtube
       )
     end
 
-    def create
-      result = @client.playlist_action(self)
-      @youtube_id = result.data.id
-    end
-
     def populate_with_songs(songs)
-      create if @youtube_id.blank?
+      @youtube_id.blank? ? create : recreate
 
       songs.each do |song|
         youtube_song = Youtube::Song.new(@client, @youtube_id)
@@ -37,6 +35,16 @@ module Youtube
       end
 
       @youtube_id
+    end
+
+    def create
+      result = @client.playlist_action('create', self)
+      @youtube_id = result.data.id
+    end
+
+    def recreate
+      result = @client.playlist_action('recreate', self)
+      @youtube_id = result.data.id
     end
   end
 end

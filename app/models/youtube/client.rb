@@ -32,38 +32,51 @@ module Youtube
     end
 
     def search_action(query)
-      @client.
-        execute(
-          :api_method => @discovered_api.search.list,
-          :parameters =>
-            {
-              :part => 'id',
-              :q => query,
-              :type => 'video',
-              :videoEmbeddable => 'true',
-              :maxResults => 1
-            }
-        )
+      execute(
+        :api_method => @discovered_api.search.list,
+        :parameters =>
+          {
+            :part => 'id',
+            :q => query,
+            :type => 'video',
+            :videoEmbeddable => 'true',
+            :maxResults => 1
+          }
+      )
     end
 
-    def playlist_action(playlist)
-      @client.
+    def playlist_action(action, playlist)
+      case action
+      when 'create'
         execute(
           :api_method => @discovered_api.playlists.insert,
           :parameters => {:part => 'snippet,status'},
-          :body => playlist.to_json,
-          :headers => {'Content-Type' => 'application/json'}
+          :body => playlist.to_json
         )
+      when 'delete'
+        execute(
+          :api_method => @discovered_api.playlists.delete,
+          :parameters => {:id => playlist.youtube_id}
+        )
+      when 'recreate'
+        playlist_action('delete', playlist)
+        playlist_action('create', playlist)
+      end
     end
 
     def playlist_item_action(playlist_item)
-      @client.
-        execute(
-          :api_method => @discovered_api.playlist_items.insert,
-          :parameters => {:part => 'snippet'},
-          :body => playlist_item.to_json,
-          :headers => {'Content-Type' => 'application/json'}
-        )
+      execute(
+        :api_method => @discovered_api.playlist_items.insert,
+        :parameters => {:part => 'snippet'},
+        :body => playlist_item.to_json
+      )
     end
+
+    private
+
+      def execute(options = {})
+        options.merge!(:headers => {'Content-Type' => 'application/json'})
+        @client.execute(options)
+      end
   end
 end

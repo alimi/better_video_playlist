@@ -18,7 +18,7 @@ describe 'Create playlist' do
   end
 
   describe 'and associate it with Youtube playlist of Billboard songs' do
-    let(:youtube_playlist) { Youtube::Playlist.new(client, playlist.name) }
+    let(:youtube_playlist) { Youtube::Playlist.new(client, playlist) }
 
     before do
       VCR.use_cassette 'youtube/populate_hot_100_playlist' do
@@ -32,9 +32,7 @@ describe 'Create playlist' do
   describe 'and update its Youtube playlist of Billboard songs' do
     before { playlist.youtube_id = 'PLOANzs84P9WSE3tcKD7mkipmXSC8LkuAE' }
 
-    let(:youtube_playlist) do
-      Youtube::Playlist.new(client, playlist.name, playlist.youtube_id)
-    end
+    let(:youtube_playlist) { Youtube::Playlist.new(client, playlist) }
 
     before do
       VCR.use_cassette 'youtube/repopulate_hot_100_playlist' do

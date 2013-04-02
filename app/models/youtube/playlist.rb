@@ -4,10 +4,10 @@ module Youtube
   class Playlist
     attr_accessor :youtube_id
 
-    def initialize(client, title, youtube_id=nil)
+    def initialize(client, playlist)
       @client = client
-      @title = title
-      @youtube_id = youtube_id
+      @title = playlist.name
+      @youtube_id = playlist.youtube_id
     end
 
     def to_json

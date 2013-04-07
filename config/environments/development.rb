@@ -34,4 +34,19 @@ BetterVideoPlaylist::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Using Gmail for email delivery
+  config.action_mailer.delivery_method = :smtp
+
+  config.after_initialize do
+    config.action_mailer.smtp_settings = {
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => 'stormyflower.com',
+      :user_name => BetterVideoPlaylist::Application.config.gmail_username,
+      :password => BetterVideoPlaylist::Application.config.gmail_password,
+      :authentication => 'plain',
+      :enable_starttls_auto => true
+    }
+  end
 end

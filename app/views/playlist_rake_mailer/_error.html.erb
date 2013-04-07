@@ -1,0 +1,11 @@
+<% if youtube_playlist.error_message %>
+  <p>
+    Bad news :( <%= youtube_playlist.error_message %>
+
+    <ul>
+      <% youtube_playlist.failing_songs.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </p>
+<% end %>

@@ -3,6 +3,7 @@ require 'google/api_client'
 module Youtube
   class Playlist
     attr_accessor :youtube_id
+    attr_reader :title, :success_message, :error_message, :failing_songs
 
     def initialize(client, playlist)
       @client = client
@@ -26,11 +27,11 @@ module Youtube
         youtube_song = Youtube::Song.new(@client, @youtube_id)
         youtube_song.set_video_from_query(song)
         result = @client.playlist_item_action(youtube_song)
+
         if result.data.id
-          puts "Yay! Song '#{song}' added to #{@title}:#{@youtube_id} as #{result.data.id}"
+          log_successful_add
         else
-          puts "Boo! Song '#{song}' not added to #{@title}:#{@youtube_id}."
-          puts result.data.error.inspect
+          log_failing_add(song, result.data.error)
         end
       end
 
@@ -46,5 +47,22 @@ module Youtube
       result = @client.playlist_action('recreate', self)
       @youtube_id = result.data.id
     end
+
+    private
+
+      def log_successful_add
+        @added ||= 0
+        @added += 1
+        @success_message = "Successfully added #{@added} songs to #{@title}."
+      end
+
+      def log_failing_add(song, error)
+        @failed ||= 0
+        @failed += 1
+        @error_message = "Failed to add #{@failed} songs to #{@title}."
+
+        @failing_songs ||= []
+        @failing_songs << "'#{song}' was not added because of #{error}"
+      end
   end
 end

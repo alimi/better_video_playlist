@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <strong>All <%= @youtube_playlists.length %> Playlists Created</strong>
+
+    <% @youtube_playlists.each_with_index do |youtube_playlist, index| %>
+      <p>
+        <strong><%= index + 1 %>.</strong> <%= youtube_playlist.title %>
+      </p>
+
+      <%= render 'success', :youtube_playlist => youtube_playlist %>
+      <%= render 'error', :youtube_playlist => youtube_playlist %>
+      <%= render 'info', :youtube_playlist => youtube_playlist %>
+    <%end %>
+  </body>
+</html>

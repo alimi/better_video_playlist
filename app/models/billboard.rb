@@ -17,17 +17,17 @@ class Billboard
 
     def self.url_for_chart(name)
       case name
-      when 'hot_100'
+      when /hot.100/i
         return 'http://www.billboard.com/rss/charts/hot-100'
-      when 'hip_hop'
+      when /hip.hop/i
         return 'http://www1.billboard.com/rss/charts/r-b-hip-hop-songs'
-      when 'country'
+      when /country/i
         return 'http://www1.billboard.com/rss/charts/country-songs'
-      when 'rock'
+      when /rock/i
         return  'http://www1.billboard.com/rss/charts/rock-songs'
-      when 'latin'
+      when /latin/i
         return 'http://www1.billboard.com/rss/charts/latin-songs'
-      when 'dance'
+      when /dance/i
         return 'http://www1.billboard.com/rss/charts/dance-club-play-songs'
       end
     end

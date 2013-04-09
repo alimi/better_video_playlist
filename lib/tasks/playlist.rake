@@ -6,7 +6,11 @@ namespace :playlist do
       client.refresh_access_token
       youtube_playlists = []
 
-      %w(hot_100 hip_hop country rock latin dance).each do |name|
+      playlists = Rails.env.production? ?
+        %w(Hot\ 100 Hip-Hop/R&B Country Rock Latin Dance) :
+        %w(hot_100_dev hip_hop_dev country_dev rock_dev latin_dev dance_dev)
+
+      playlists.each do |name|
         playlist = Playlist.new(:name => name)
         songs = Billboard.songs_for_chart(name)
         youtube_playlist = Youtube::Playlist.new(client, playlist)

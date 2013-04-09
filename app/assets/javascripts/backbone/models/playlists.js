@@ -5,6 +5,10 @@ BetterVideoPlaylist.Collections.Playlists = Backbone.Collection.extend({
     this.on('change:pending', this.activatePlaylist, this);
   },
 
+  url: function() {
+    return '/playlists';
+  },
+
   activatePlaylist: function() {
     var pending = this.find(function(playlist) {
       return playlist.get('pending');

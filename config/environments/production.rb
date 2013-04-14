@@ -64,4 +64,19 @@ BetterVideoPlaylist::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Using Gmail for email delivery
+  config.action_mailer.delivery_method = :smtp
+
+  config.after_initialize do
+    config.action_mailer.smtp_settings = {
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => 'stormyflower.com',
+      :user_name => BetterVideoPlaylist::Application.config.gmail_username,
+      :password => BetterVideoPlaylist::Application.config.gmail_password,
+      :authentication => 'plain',
+      :enable_starttls_auto => true
+    }
+  end
 end

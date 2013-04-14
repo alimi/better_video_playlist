@@ -30,8 +30,8 @@ namespace :playlist do
     client = Youtube::Client.new
     client.refresh_access_token
 
-    playlist = Playlist.find_by_name(args.name)
-    songs = Billboard.songs_for_chart(args.name)
+    playlist = Playlist.find_by_name(args[:name])
+    songs = Billboard.songs_for_chart(args[:name])
     youtube_playlist = Youtube::Playlist.new(client, playlist)
 
     playlist.youtube_id = youtube_playlist.populate_with_songs(songs)

@@ -7,8 +7,8 @@ define(function(require){
     var playlists = new PlaylistsCollection();
 
     rootEl.
-      append(new PlaylistsView({collection: playlists}).render().el).
-      append(Player.render().el);
+      append(Player.render().el).
+      append(new PlaylistsView({collection: playlists}).render().el);
 
     playlists.fetch();
   }

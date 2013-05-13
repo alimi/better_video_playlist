@@ -3,14 +3,16 @@ define(function(require){
       Playlist = require('Views.Playlist');
 
   return Backbone.View.extend({
-    tagName: 'ul',
+    tagName: 'menu',
+    className: 'wrapper',
 
     initialize: function() {
+      this.$el.html('<ul></ul>');
       this.listenTo(this.collection, 'add', this.addPlaylist);
     },
 
     addPlaylist: function(model) {
-      this.$el.append(new Playlist({model: model}).render().el);
+      this.$('ul').append(new Playlist({model: model}).render().el);
     }
   });
 });

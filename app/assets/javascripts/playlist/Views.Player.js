@@ -4,7 +4,7 @@ define(function(require){
       YoutubePlayer = require('Youtube.Player');
 
   return new(Backbone.View.extend({
-    className: 'wrapper player-container',
+    className: 'wrapper-left',
 
     initialize: function() {
       this.$el.html(this.template());
@@ -16,8 +16,10 @@ define(function(require){
     },
 
     template: _.template(
-      '<iframe id="player" src="http://www.youtube.com/embed/enablejsapi=1">' +
-      '</iframe>'
+      '<div class="player-container">' +
+        '<iframe id="player" src="http://www.youtube.com/embed/enablejsapi=1">' +
+        '</iframe>' +
+      '</div>'
     )
   }));
 });

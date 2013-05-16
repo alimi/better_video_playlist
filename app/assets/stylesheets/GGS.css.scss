@@ -218,6 +218,22 @@ h3 {
 			box-sizing: border-box;
 }
 
+.wrapper-left {
+	padding: 0 #{($line/2)/$em}em;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+.wrapper-right {
+	padding: 0 #{($line/2)/$em}em;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
 .player-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -285,10 +301,15 @@ h3 {
 		font-size: #{($font-size) / $em}em;
 	}
 
-	.twoway .wrapper {
-		float: left;
-		width: 50%;
-	}
+    .wrapper-left {
+      float: left;
+      width: 75%;
+    }
+
+    .wrapper-right {
+      float: left;
+      width: 25%;
+    }
 
 }
 
@@ -311,10 +332,6 @@ h3 {
 		font-size: #{($font-size) / $em}em;
 	}
 
-	header, .twoway {
-		margin: 0 $column*3;
-	}
-
 }
 
 
@@ -335,10 +352,6 @@ h3 {
 	body {
 		/* Reset baseline grid to 16/16 = 1.0 */
 		font-size: #{($font-size) / $em}em;
-	}
-
-	header, .twoway {
-		margin: 0 $column*5;
 	}
 
 }
@@ -367,15 +380,6 @@ h3 {
 
 /* @media screen and (min-width: 1872px) */
 @media screen and (min-width: 117em) {
-
-	header, #twoway {
-		margin: 0 $column*1;
-	}
-
-	header .wrapper {
-		width: 37.5%;
-		margin-left: 25%;
-	}
 
 	#twoway .wrapper {
 		width: 25%;

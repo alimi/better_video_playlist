@@ -4,7 +4,7 @@ define(function(require){
 
   return Backbone.View.extend({
     tagName: 'menu',
-    className: 'wrapper',
+    className: 'wrapper-right',
 
     initialize: function() {
       this.$el.html('<ul></ul>');

@@ -5,11 +5,10 @@ define(function(require){
 
   return function(rootEl) {
     var playlists = new PlaylistsCollection();
+    playlists.reset($('div#bootstrap').data('playlists'));
 
     rootEl.
       append(Player.render().el).
       append(new PlaylistsView({collection: playlists}).render().el);
-
-    playlists.fetch();
   }
 });

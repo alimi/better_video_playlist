@@ -13,7 +13,11 @@ define(function(require){
 
     initialize: function() {
       this.$el.html(this.template());
-      this.listenTo(this.collection, 'add', this.addPlaylist);
+      this.addPlaylists();
+    },
+
+    addPlaylists: function() {
+      this.collection.each(this.addPlaylist, this);
     },
 
     addPlaylist: function(model) {

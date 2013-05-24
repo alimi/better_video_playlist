@@ -22,7 +22,7 @@ define(function(require){
 
     addPlaylist: function(model) {
       this.$('ul').append(
-        new Playlist({model: model, parentView: this}).render().el
+        new Playlist({model: model}).render().el
       );
     },
 

@@ -7,6 +7,8 @@ define(function(require){
     var playlists = new PlaylistsCollection();
     playlists.reset($('div#bootstrap').data('playlists'));
 
+    Player.updatePlaylist(playlists.first().escape('youtube_id'));
+
     rootEl.
       append(Player.render().el).
       append(new PlaylistsView({collection: playlists}).render().el);

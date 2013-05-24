@@ -19,7 +19,7 @@ define(function(require){
     },
 
     loadPlaylist: function() {
-      Player.update(this.model.escape('youtube_id'));
+      Player.updatePlaylist(this.model.escape('youtube_id'));
       return false;
     },
 

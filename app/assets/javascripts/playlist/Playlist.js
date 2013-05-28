@@ -6,11 +6,10 @@ define(function(require){
   return function(rootEl) {
     var playlists = new PlaylistsCollection();
     playlists.reset($('div#bootstrap').data('playlists'));
-
-    Player.updatePlaylist(playlists.first().escape('youtube_id'));
+    playlists.first().set('active', true);
 
     rootEl.
-      append(Player.render().el).
+      append(new Player({playlists: playlists}).render().el).
       append(new PlaylistsView({collection: playlists}).render().el);
   }
 });

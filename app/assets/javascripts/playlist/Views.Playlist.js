@@ -1,7 +1,6 @@
 define(function(require){
   var Backbone = require('backbone'),
-      _ = require('underscore'),
-      Player = require('Views.Player');
+      _ = require('underscore');
 
   _.templateSettings = {
     interpolate: /\{\{(.+?)\}\}/g
@@ -16,10 +15,7 @@ define(function(require){
 
     initialize: function() {
       this.$el.html(this.template(this.model.toJSON()));
-
-      this.
-        listenTo(this.model, 'change:active', this.render).
-        listenTo(this.model, 'change:active', this.updatePlayer);
+      this.listenTo(this.model, 'change:active', this.render);
     },
 
     render: function() {
@@ -33,11 +29,6 @@ define(function(require){
 
     pendingActivation: function() {
       this.model.set('pending', true);
-    },
-
-    updatePlayer: function() {
-      if(this.model.get('active'))
-        Player.updatePlaylist(this.model.escape('youtube_id'));
     },
 
     template: _.template(

@@ -3,36 +3,41 @@ define(function(require){
       _ = require('underscore'),
       YoutubePlayer = require('Youtube.Player');
 
-  return new(Backbone.View.extend({
+  _.templateSettings = {
+    interpolate: /\{\{(.+?)\}\}/g
+  };
+
+  return Backbone.View.extend({
     className: 'wrapper-left',
 
-    initialize: function() {
-      this.$el.html(this.template());
+    initialize: function(options) {
+      this.playlists = options.playlists;
       this.youtubePlayer = new YoutubePlayer("player");
-      this.hasInitialPlaylist = false;
+
+      this.$el.html(this.template({
+        initialPlaylist: this.playlists.activePlaylist().get('youtube_id')
+      }));
+
+      this.listenTo(this.playlists, 'change:active', this.loadPlaylist);
     },
 
-    updatePlaylist: function(youtubeId) {
-      if(this.hasInitialPlaylist)
-        this.youtubePlayer.action('loadPlaylist', {list: youtubeId});
-      else
-        this._setInitialPlaylist(youtubeId);
-    },
-
-    _setInitialPlaylist: function(youtubeId) {
-      this.$('iframe').attr('src', function(index, value) {
-        return value + '&listType=playlist&list=' + youtubeId;
-      });
-
-      this.hasInitialPlaylist = true;
+    loadPlaylist: function(playlist) {
+      if(playlist.get('active'))
+        this.youtubePlayer.action(
+          'loadPlaylist', { list: playlist.get('youtube_id') }
+        );
     },
 
     template: _.template(
       '<div class="player-container">' +
-        '<iframe id="player" ' +
-          'src="http://www.youtube.com/embed/?enablejsapi=1">' +
+        '<iframe id="player" src="' +
+          'http://www.youtube.com/embed/?' +
+            'enablejsapi=1&' +
+            'listType=playlist&' +
+            'list={{initialPlaylist}}' +
+        '">' +
         '</iframe>' +
       '</div>'
     )
-  }));
+  });
 });

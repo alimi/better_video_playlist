@@ -20,9 +20,9 @@ define(function(require){
 
     render: function() {
       if(this.model.get('active'))
-        this.$('span').show();
+        this.$el.addClass('active')
       else
-        this.$('span').hide();
+        this.$el.removeClass('active')
 
       return this;
     },
@@ -32,7 +32,7 @@ define(function(require){
     },
 
     template: _.template(
-      '{{name}} <span> is now playing</span>'
+      '{{name}}'
     )
   });
 });

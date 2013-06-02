@@ -7,7 +7,12 @@ ul {
 
   li {
     cursor: pointer;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid black;
+  }
+
+  li.active {
+    background-color: #cc0000;
+    color: white;
   }
 
   li:last-child {

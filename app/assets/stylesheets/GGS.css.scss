@@ -12,6 +12,7 @@
 //
 
 $line: 24;
+$half-line: $line / 2;
 $column: 100% / 18;
 $font-size: 16;
 $em: $font-size * 1;
@@ -203,6 +204,11 @@ h2 {
 
 h3 {
 	margin: #{24/$em}em 0 #{24/$em}em;
+}
+
+li {
+  padding: #{$half-line / $em}em 0 #{$half-line / $em}em;
+  text-align: center;
 }
 
 /*

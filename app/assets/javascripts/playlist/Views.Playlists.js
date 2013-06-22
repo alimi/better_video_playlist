@@ -27,7 +27,7 @@ define(function(require){
     },
 
     template: _.template(
-      '<ul></ul>'
+      '<ul class="playlists"></ul>'
     )
   });
 });

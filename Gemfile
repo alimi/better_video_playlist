@@ -6,7 +6,6 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'rails-backbone', '~> 0.7.2'
 gem 'nokogiri', '~> 1.5.6'
 gem "google-api-client", "~> 0.6.1"
 
@@ -33,7 +32,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'less-rails-bootstrap', '~> 2.2.0'
   gem 'therubyracer', '~> 0.10.2'
 end
 

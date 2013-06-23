@@ -1,22 +1,22 @@
-<h3>Admin</h3>
-
-<ul>
-  <li>
-    <strong>YouTube username</strong>
-    <p><%= @youtube_username %></p>
-  </li>
-  <li>
-    <% if BetterVideoPlaylist::Application.config.youtube_refresh_token.blank? %>
-      <%= link_to(
-        "Get Authorization to use #{@youtube_username} data",
-        youtube_authorization_path,
-        :method => :post
-      )%>
-    <% else %>
-      <strong>Refresh token</strong>
-      <p>
-        <%= BetterVideoPlaylist::Application.config.youtube_refresh_token %>
-      </p>
-    <% end %>
-  </li>
-</ul>
+<div class="wrapper twoway">
+  <ul>
+    <li>
+      <strong>YouTube username</strong>
+      <p><%= @youtube_username %></p>
+    </li>
+    <li>
+      <% if BetterVideoPlaylist::Application.config.youtube_refresh_token.blank? %>
+        <%= link_to(
+          "Get Authorization to use #{@youtube_username} data",
+          youtube_authorization_path,
+          :method => :post
+        )%>
+      <% else %>
+        <strong>Refresh token</strong>
+        <p>
+          <%= BetterVideoPlaylist::Application.config.youtube_refresh_token %>
+        </p>
+      <% end %>
+    </li>
+  </ul>
+</div>

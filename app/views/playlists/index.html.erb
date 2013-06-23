@@ -1,9 +1,6 @@
-<h3>stormyflower</h3>
+<div id="playlist" class="twoway"></div>
 
-<ul id="playlist_container"></ul>
+<div id="bootstrap" data-playlists=<%= @playlists.to_json %>></div>
 
-<script type="text/javascript">
-  function onYouTubeIframeAPIReady() {
-    BetterVideoPlaylist.initialize();
-  }
+<script data-main='assets/playlist/main' src='assets/playlist/require.js'>
 </script>

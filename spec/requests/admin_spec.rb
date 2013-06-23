@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'Admin' do
   subject { page }
+  let(:username) { BetterVideoPlaylist::Application.config.youtube_username }
 
   describe 'Login' do
     before { basic_authorization_login }
@@ -15,8 +16,8 @@ describe 'Admin' do
   describe 'Getting YouTube authorization' do
     before do
       basic_authorization_login
-      pending "Need to webmock external requests"
-      # click_link 'Get Authorization'
+      pending "Should I stay or should I go?"
+      click_link "Get Authorization to use #{username} data"
     end
 
     it { should have_content 'The refresh token is' }

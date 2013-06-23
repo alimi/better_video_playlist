@@ -1,0 +1,29 @@
+@mixin small($font-size, $em, $line) {
+  font-size: #{($font-size*0.8125) / $em}em;
+  line-height: ($line*0.75) / ($font-size*0.8125) * 1em;
+}
+
+@mixin normal($font-size, $em, $line) {
+  font-size: #{$font-size / $em}em;
+  line-height: #{$line / $em}em;
+}
+
+@mixin large($font-size, $em, $line) {
+  font-size: #{26 / $em}em;
+  line-height: ($line*1.5) / 26 * 1em;
+}
+
+@mixin huge($font-size, $em, $line) {
+  font-size: #{42 / $em}em;
+  line-height: ($line*2) / 42 * 1em;
+}
+
+@mixin massive($font-size, $em, $line) {
+  font-size: #{68 / $em}em;
+  line-height: ($line*3) / 68 * 1em;
+}
+
+@mixin gigantic($font-size, $em, $line) {
+  font-size: #{110 / $em}em;
+  line-height: ($line*5) / 110 * 1em;
+}

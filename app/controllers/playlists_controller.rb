@@ -2,6 +2,7 @@ class PlaylistsController < ApplicationController
   respond_to :json, :html
 
   def index
-    respond_with Playlist.all
+    @playlists = Playlist.all
+    respond_with @playlists
   end
 end

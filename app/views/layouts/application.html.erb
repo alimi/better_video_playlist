@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BetterVideoPlaylist</title>
+  <title>stormyflower</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "https://www.youtube.com/iframe_api" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "GGS" if Rails.env.development? %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'shared/flash_messages', :flash => flash %>
-  <div class="container-fluid">
-    <center>
-      <%= yield %>
-    </center>
-  </div>
-
+  <%= render 'shared/header' %>
+  <%= yield %>
 </body>
 </html>

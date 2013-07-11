@@ -7,7 +7,7 @@
     <li>
       <% if BetterVideoPlaylist::Application.config.youtube_refresh_token.blank? %>
         <%= link_to(
-          "Get Authorization to use #{@youtube_username} data",
+          "Get authorization to use #{@youtube_username} data",
           youtube_authorization_path,
           :method => :post
         )%>

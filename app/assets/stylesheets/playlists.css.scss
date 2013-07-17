@@ -38,3 +38,14 @@ ul.playlists {
   width: 100%;
   height: 100%;
 }
+
+footer {
+  a {
+    text-decoration: none;
+    color: #b10000;
+
+    &:visited {
+      color: #b10000;
+    }
+  }
+}

@@ -36,8 +36,13 @@ h3 {
 *
 */
 
-header, .twoway {
+header, footer, .twoway {
   margin: 0 $column;
+}
+
+footer {
+  clear: both;
+  padding-top: #{$line / $em}em;
 }
 
 h1, h2 {

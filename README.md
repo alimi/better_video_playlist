@@ -132,3 +132,7 @@ The following rake tasks are defined to create/update playlists:
 I'm open to any and all feedback.  Really!  It's a great way to learn!
 
 Pull requests accepted! :smiley_cat:
+
+## License
+
+Licensed under GPLv2

@@ -10,3 +10,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore rails config
+/config/database.yml
